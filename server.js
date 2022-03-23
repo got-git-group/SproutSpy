@@ -9,6 +9,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//ToDo: Add wrapper for sequelize when DB connection is set up
 app.listen(PORT, () => {
   console.log(`App started and listening on port ${PORT}`);
 });

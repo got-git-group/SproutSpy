@@ -49,8 +49,8 @@ This project is created with:
 * Openweathermaps API
 
 ## Screenshot
-![screenshot](./assets/images/weatherss.jpg)
-![screenshot](./assets/images/localgarden.jpg)
+![screenshot](./public/images/weatherss.jpg)
+![screenshot](./public/images/localgarden.jpg)
 
 ## Setup
 

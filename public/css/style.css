@@ -24,17 +24,21 @@ header {
 	margin-bottom: 15px;
 }
 
+h1 img {
+	flex-direction: row;
+}
+
 .classNav {
 	display: flex;
-	justify-content: space-between;
-
+	/* justify-content: space-between; */
 }
 
 .classNav img {
 	height: 25px;
-	width: 25px;
+	width: 35px;
 	margin: 0px;
 	margin-top: 8px;
+	padding-left: 10px;
 }
 
 #gardenImage {

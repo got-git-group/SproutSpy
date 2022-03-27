@@ -1,168 +1,195 @@
-// // creating Welcome modal and zipmodal variable
-// const $modal = $('.modal');
-// const $zipModal = $('.zipModal');
-// // Array to store the community garden markers
-// let markers = [];
-// // creating input variable and search button variable
-// const zipInput = document.querySelector('#zip');
-// const searchBtn = document.querySelector('#button1');
-// // will be used later to pull zip value
-// let getZip;
-// // variables for displaying zone results and creating appropriate link
-// const zoneResults = document.querySelector('.zoneResults');
-// const results = document.querySelector('.results');
-// const zoneLink = document.querySelector('#zoneLink');
+// geocoder for zip code to location conversations
+let geocoder;
+// Service to query community gardens
+let service;
+// The map to display them all
+let map;
+// Infowindow
+let infowindow;
+// Coords to center the map initially
+const coords = { lat: 47.6142, lng: -122.1937 };
 
-// getZip = localStorage.getItem('zip') || '98052';
+// Google maps
+// eslint-disable-next-line func-names
+const initMap = function () {
+  // eslint-disable-next-line no-undef
+  map = new google.maps.Map(document.getElementById('localgardenmap'), {
+    center: coords,
+    zoom: 11
+  });
 
-// // Defines the request for community gardens
-// const requestGardens = {
-//   location: coords,
-//   radius: '500', // Preferring results closer to the center point.
-//   query: 'community garden',
-// };
+  // eslint-disable-next-line no-undef
+  geocoder = new google.maps.Geocoder();
 
-// // modal
-// $modal.dialog({
-//   modal: true,
-//   buttons: [
-//     {
-//       text: 'Yes!',
-//       click() {
-//         $(this).dialog('close');
-//       }
-//     },
-//     {
-//       text: "No, I'll be wearing gloves.",
-//       click() {
-//         $(this).dialog('close');
-//       }
-//     }
-//   ],
-//   minWidth: 400,
-// });
+  // eslint-disable-next-line no-undef
+  infowindow = new google.maps.InfoWindow();
 
-// const init = function () {
-//   $zipModal.hide();
-//   geocode({ address: getZip });
-//   getAgZone(getZip);
-// };
+  // eslint-disable-next-line no-undef
+  service = new google.maps.places.PlacesService(map);
+};
 
-// const createMarker = function (place) {
-//   if (!place.geometry || !place.geometry.location) return;
+const $modal = $('.modal');
+const $zipModal = $('.zipModal');
+// Array to store the community garden markers
+let markers = [];
+// creating input variable and search button variable
+const zipInput = document.querySelector('#zip');
+const searchBtn = document.querySelector('#button1');
+// will be used later to pull zip value
+let getZip;
+// variables for displaying zone results and creating appropriate link
+const zoneResults = document.querySelector('.zoneResults');
+const results = document.querySelector('.results');
+const zoneLink = document.querySelector('#zoneLink');
 
-//   const marker = new google.maps.Marker({
-//     map,
-//     position: place.geometry.location,
-//   });
-//   // open a pop-up window to display address for the marker.
-//   google.maps.event.addListener(marker, 'click', () => {
-//     const content = document.createElement('div');
-//     const nameElement = document.createElement('h2');
-//     const addressElement = document.createElement('p');
+getZip = localStorage.getItem('zip') || '98052';
 
-//     nameElement.textContent = place.name;
-//     addressElement.textContent = place.formatted_address;
+// Defines the request for community gardens
+const requestGardens = {
+  location: coords,
+  radius: '500', // Preferring results closer to the center point.
+  query: 'community garden',
+};
 
-//     content.appendChild(nameElement);
-//     content.appendChild(addressElement);
-//     infowindow.setContent(content);
-//     infowindow.open(map, marker);
-//   });
-//   markers.push(marker);
-// };
+// modal
+$modal.dialog({
+  modal: true,
+  buttons: [
+    {
+      text: 'Yes!',
+      click() {
+        $(this).dialog('close');
+      }
+    },
+    {
+      text: "No, I'll be wearing gloves.",
+      click() {
+        $(this).dialog('close');
+      }
+    }
+  ],
+  minWidth: 400,
+});
 
-// // Function to search community gardens and create markers for them.
-// const getCommunityGardens = function (requestLocation) {
-//   markers = [];
-//   console.log(markers);
-//   console.log(requestLocation);
-//   service.textSearch(requestLocation, (results, status) => {
-//     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-//       console.log(results.length);
-//       for (let i = 0; i < results.length; i++) {
-//         createMarker(results[i]);
-//       }
-//     }
-//   });
-// };
+const createMarker = function (place) {
+  if (!place.geometry || !place.geometry.location) return;
 
-// var geocode = function (request) {
-//   clear();
-//   geocoder.geocode(request)
-//     .then((result) => {
-//       const { results } = result;
+  const marker = new google.maps.Marker({
+    map,
+    position: place.geometry.location,
+  });
+  // open a pop-up window to display address for the marker.
+  google.maps.event.addListener(marker, 'click', () => {
+    const content = document.createElement('div');
+    const nameElement = document.createElement('h2');
+    const addressElement = document.createElement('p');
 
-//       map.setCenter(results[0].geometry.location);
+    nameElement.textContent = place.name;
+    addressElement.textContent = place.formatted_address;
 
-//       console.log(results[0].geometry.location.lat());
-//       requestGardens.location.lat = results[0].geometry.location.lat();
-//       requestGardens.location.lng = results[0].geometry.location.lng();
-//       console.log(requestGardens.location.lat);
-//       getCommunityGardens(requestGardens);
-//     })
-//     .catch((e) => {
-//       alert(`Geocode was not successful for the following reason: ${e}`);
-//     });
-// };
+    content.appendChild(nameElement);
+    content.appendChild(addressElement);
+    infowindow.setContent(content);
+    infowindow.open(map, marker);
+  });
+  markers.push(marker);
+};
 
-// // Sets the map on all markers in the array.
-// function setMapOnAll(map) {
-//   for (let i = 0; i < markers.length; i++) {
-//     markers[i].setMap(map);
-//   }
-// }
+// Function to search community gardens and create markers for them.
+const getCommunityGardens = function (requestLocation) {
+  markers = [];
+  console.log(markers);
+  console.log(requestLocation);
+  service.textSearch(requestLocation, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+      console.log(results.length);
+      for (let i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
+    }
+  });
+};
 
-// var clear = function () {
-//   setMapOnAll(null);
-//   markers = [];
-// };
+const geocode = function (request) {
+  clear();
+  geocoder.geocode(request)
+    .then((result) => {
+      const { results } = result;
 
-// // ZIPCODE INPUT
-// searchBtn.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   getZip = zipInput.value.trim();
-//   if (getZip.length !== 5) {
-//     // zipModal displays if zipcode entry is !5 character
-//     $zipModal.dialog({
-//       modal: true,
-//       minWidth: 400,
-//     });
-//   } else {
-//     console.log(getZip);
-//     // stores zipcodes
-//     localStorage.setItem('zip', getZip);
-//     geocode({ address: getZip });
-//     getAgZone(getZip);
-//     // if ($zipModal.css('visibility') === 'hidden') {
-//     //   $zipModal.css('visibility', 'visible');
-//     // } else {
-//     //   $zipModal.css('visibility', 'hidden');
-//     // }
-//   }
-// });
+      map.setCenter(results[0].geometry.location);
 
-// const show = function () {
-//   paraP = document.getElementById('hidden');
-// };
+      console.log(results[0].geometry.location.lat());
+      requestGardens.location.lat = results[0].geometry.location.lat();
+      requestGardens.location.lng = results[0].geometry.location.lng();
+      console.log(requestGardens.location.lat);
+      getCommunityGardens(requestGardens);
+    })
+    .catch((e) => {
+      alert(`Geocode was not successful for the following reason: ${e}`);
+    });
+};
 
-// // API to pull agricultural zone
-// var getAgZone = function (getZip) {
-//   // stitch the zipcode into the API URL
-//   const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZip}`;
-//   console.log(agURL);
-//   fetch(agURL)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//       zoneResults.textContent = `You live in Zone ${data.zone}!`;
-//       // generate link to zone growing info
-//       zoneLink.href = `https://www.gardenate.com/?zone=${data.zone}`;
-//       zoneLink.target = '_blank';
-//       zoneLink.innerText = 'Click here to see what you can grow in your zone!';
-//     });
-// };
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
 
-// document.addEventListener('DOMContentLoaded', (e) => {
-//   init();
-// });
+const clear = function () {
+  setMapOnAll(null);
+  markers = [];
+};
+
+// ZIPCODE INPUT
+searchBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  getZip = zipInput.value.trim();
+  if (getZip.length !== 5) {
+    // zipModal displays if zipcode entry is !5 character
+    $zipModal.dialog({
+      modal: true,
+      minWidth: 400,
+    });
+  } else {
+    console.log(getZip);
+    // stores zipcodes
+    localStorage.setItem('zip', getZip);
+    geocode({ address: getZip });
+    getAgZone(getZip);
+    // if ($zipModal.css('visibility') === 'hidden') {
+    //   $zipModal.css('visibility', 'visible');
+    // } else {
+    //   $zipModal.css('visibility', 'hidden');
+    // }
+  }
+});
+
+// API to pull agricultural zone
+// eslint-disable-next-line func-names
+const getAgZone = function (getZipCode) {
+  // stitch the zipcode into the API URL
+  const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZipCode}`;
+  console.log(agURL);
+  fetch(agURL)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      zoneResults.textContent = `You live in Zone ${data.zone}!`;
+      // generate link to zone growing info
+      zoneLink.href = `https://www.gardenate.com/?zone=${data.zone}`;
+      zoneLink.target = '_blank';
+      zoneLink.innerText = 'Click here to see what you can grow in your zone!';
+    });
+};
+
+const init = function () {
+  initMap();
+  $zipModal.hide();
+  geocode({ address: getZip });
+  getAgZone(getZip);
+};
+
+document.addEventListener('DOMContentLoaded', (e) => {
+  init();
+});

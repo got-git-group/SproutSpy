@@ -4,22 +4,24 @@ const Zone = require('./Zone');
 const Sunshine = require('./Sunshine');
 
 Plant.belongsToMany(Sunshine, {
-    through: 'PlantSunshine',
+  through: 'PlantSunshine',
 });
 
 Sunshine.belongsToMany(Plant, {
-    through: 'PlantSunshine',
+  through: 'PlantSunshine',
 });
 
 Plant.belongsToMany(Zone, {
-    through: 'PlantZone',
+  through: 'PlantZone',
 });
 
 Zone.belongsToMany(Plant, {
-    through: 'PlantZone',
+  through: 'PlantZone',
 });
 
-module.exports = { User, Plant, Zone, Sunshine };
+module.exports = {
+  User, Plant, Zone, Sunshine
+};
 
-// plants can have many zones, zone can have many plants, sunshine can have many plants, 
+// plants can have many zones, zone can have many plants, sunshine can have many plants,
 // plants can have many sunshine, zone and sunshine do not need to be connected

@@ -1,6 +1,6 @@
 # Sprout Spy
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](insert app link)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](insert deployed url)
 
 ## Table of contents
 * [General info](#general-info)

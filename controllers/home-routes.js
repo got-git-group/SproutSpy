@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const { User, Plant, Zone, Sunshine } = require('../models');
+
 // do we need to import a model? I don't think so if this is a static page.
 
 router.get('/', async (req, res) => {

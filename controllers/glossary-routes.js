@@ -3,10 +3,12 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
   try {
-    // what goes here? It's a static page and shouldn't require searching a model from the database. Unless we add the glossary to the db.
-    // Does anything else need to be rendered? I think not if we aren't pulling anything from the db.
+    /* what goes here? It's a static page and shouldn't require searching
+    a model from the database. Unless we add the glossary to the db. Does
+    anything else need to be rendered? I think not if we aren't pulling 
+    anything from the db. */
     res.render('glossary', {
-      loggedIn: req.session.loggedIn,
+    //   loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);

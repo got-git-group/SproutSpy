@@ -1,4 +1,33 @@
-// creating Welcome modal and zipmodal variable
+// geocoder for zip code to location conversations
+let geocoder;
+// Service to query community gardens
+let service;
+// The map to display them all
+let map;
+// Infowindow
+let infowindow;
+// Coords to center the map initially
+const coords = { lat: 47.6142, lng: -122.1937 };
+
+// Google maps
+// eslint-disable-next-line func-names
+const initMap = function () {
+  // eslint-disable-next-line no-undef
+  map = new google.maps.Map(document.getElementById('localgardenmap'), {
+    center: coords,
+    zoom: 11
+  });
+
+  // eslint-disable-next-line no-undef
+  geocoder = new google.maps.Geocoder();
+
+  // eslint-disable-next-line no-undef
+  infowindow = new google.maps.InfoWindow();
+
+  // eslint-disable-next-line no-undef
+  service = new google.maps.places.PlacesService(map);
+};
+
 const $modal = $('.modal');
 const $zipModal = $('.zipModal');
 // Array to store the community garden markers
@@ -42,12 +71,15 @@ $modal.dialog({
   minWidth: 400,
 });
 
+<<<<<<< HEAD
 const init = function () {
   $zipModal.hide();
   geocode({ address: getZip });
   getAgZone(getZip);
 };
 
+=======
+>>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
 const createMarker = function (place) {
   if (!place.geometry || !place.geometry.location) return;
 
@@ -87,7 +119,7 @@ const getCommunityGardens = function (requestLocation) {
   });
 };
 
-var geocode = function (request) {
+const geocode = function (request) {
   clear();
   geocoder.geocode(request)
     .then((result) => {
@@ -113,7 +145,7 @@ function setMapOnAll(map) {
   }
 }
 
-var clear = function () {
+const clear = function () {
   setMapOnAll(null);
   markers = [];
 };
@@ -141,15 +173,23 @@ searchBtn.addEventListener('click', (event) => {
     // }
   }
 });
+<<<<<<< HEAD
 
 const show = function () {
   paraP = document.getElementById('hidden');
 };
+=======
+>>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
 
 // API to pull agricultural zone
-var getAgZone = function (getZip) {
+// eslint-disable-next-line func-names
+const getAgZone = function (getZipCode) {
   // stitch the zipcode into the API URL
+<<<<<<< HEAD
   const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZip}`;
+=======
+  const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZipCode}`;
+>>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
   console.log(agURL);
   fetch(agURL)
     .then((response) => response.json())
@@ -161,6 +201,16 @@ var getAgZone = function (getZip) {
       zoneLink.target = '_blank';
       zoneLink.innerText = 'Click here to see what you can grow in your zone!';
     });
+<<<<<<< HEAD
+=======
+};
+
+const init = function () {
+  initMap();
+  $zipModal.hide();
+  geocode({ address: getZip });
+  getAgZone(getZip);
+>>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
 };
 
 document.addEventListener('DOMContentLoaded', (e) => {

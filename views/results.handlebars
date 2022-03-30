@@ -1,1 +1,7 @@
 {{!-- Use bootstrap cards, auto-generate results, see previous homeworks for inspo --}}
+<h1>Results:</h1>
+<section class="flex-row justify-center">
+  {{#each plants}}
+  {{> plant-details}}
+  {{/each}}
+</section>

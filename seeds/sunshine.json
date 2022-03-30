@@ -1,0 +1,22 @@
+[
+{
+  "id": 1,
+  "sunshinename": "Full Sun"
+},
+{
+  "id": 2,
+  "sunshinename": "Full Sun to Partial Shade"
+},
+{
+  "id": 3,
+  "sunshinename": "Partial Shade"
+},
+{
+  "id": 4,
+  "sunshinename": "Dappled Sun/Shade"
+},
+{
+  "id": 5,
+  "sunshinename": "Full Shade"
+}
+]

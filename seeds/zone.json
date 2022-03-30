@@ -1,0 +1,105 @@
+[{
+  "id":  1,
+  "zonename": "zone 1a"
+},
+{
+  "id":  2,
+  "zonename": "zone 1b"
+},
+{
+  "id":  3,
+  "zonename": "zone 2a"
+},
+{
+  "id":  4,
+  "zonename": "zone 2b"
+},
+{
+  "id":  5,
+  "zonename": "zone 3a"
+},
+{
+  "id":  6,
+  "zonename": "zone 3b"
+},
+{
+  "id":  7,
+  "zonename": "zone 4a"
+},
+{
+  "id":  8,
+  "zonename": "zone 4b"
+},
+{
+  "id":  9,
+  "zonename": "zone 5a"
+},
+{
+  "id":  10,
+  "zonename": "zone 5b"
+},
+{
+  "id":  11,
+  "zonename": "zone 6a"
+},
+{
+  "id":  12,
+  "zonename": "zone 6b"
+},
+{
+  "id":  13,
+  "zonename": "zone 7a"
+},
+{
+  "id":  14,
+  "zonename": "zone 7b"
+},
+{
+  "id":  15,
+  "zonename": "zone 8a"
+},
+{
+  "id":  16,
+  "zonename": "zone 8b"
+},
+{
+  "id":  17,
+  "zonename": "zone 9a"
+},
+{
+  "id":  18,
+  "zonename": "zone 9b"
+},
+{
+  "id":  19,
+  "zonename": "zone 10a"
+},
+{
+  "id":  20,
+  "zonename": "zone 10b"
+},
+{
+  "id":  21,
+  "zonename": "zone 11a"
+},
+{
+  "id":  22,
+  "zonename": "zone 11b"
+},
+{
+  "id":  23,
+  "zonename": "zone 12a"
+},
+{
+  "id":  24,
+  "zonename": "zone 12b"
+},
+{
+  "id":  25,
+  "zonename": "zone 13a"
+},
+{
+  "id":  26,
+  "zonename": "zone 13b"
+}
+  ]

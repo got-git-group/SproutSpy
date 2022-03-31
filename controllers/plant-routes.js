@@ -1,9 +1,12 @@
 const router = require('express').Router();
-const { Plant, Zone, Sunshine } = require('../models');
+// import models needed - may not need User/Comments
+const { Plant } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    const plantData = await Plant.findAll({});
+    const plantData = await Plant.findByPk(req.params.id, {
+      include: [{model: Sunshine, through: 'PlantSunshine'}, {model: Zone, through: 'PlantZone'}]
+    });
 
     const plants = plantData.map((plant) => plant.get({ plain: true }));
 

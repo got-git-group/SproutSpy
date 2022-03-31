@@ -3,13 +3,14 @@ const { Plant } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
-    const plantData = await Plant.findAll({});
+    const plantData = await Plant.findAll();
 
     const plants = plantData.map((plant) => plant.get({ plain: true }));
 
+
     res.render('results', {
       plants,
-      // loggedIn: req.session.loggedIn
+      loggedIn: req.session.loggedIn
     })
   } catch (err) {
     console.log(err);

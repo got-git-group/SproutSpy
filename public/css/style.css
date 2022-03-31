@@ -17,6 +17,22 @@ header {
 	background-size: 100vw 600px;
 }
 
+#email-login {
+	margin-left: 49px;
+}
+
+#password-login {
+	margin-left: 9px;
+}
+
+#email-signup {
+	margin-left: 49px;
+}
+
+#password-signup {
+	margin-left: 9px;
+}
+
 .headerT {
 	font-family: cursive;
 	font-size: 18px;
@@ -327,6 +343,26 @@ form {
 li {
 	padding: 10px;
 	font-size: 20px;
+}
+
+.card {
+	background-color: skyblue;
+}
+
+.list-group {
+	width: 55vw;
+	margin: auto;
+	padding: 15px;
+	text-align: center;
+	flex-direction: row;
+}
+
+.list-group-item {
+	/* need to be able to see the top border for part sun part shade full shade */
+}
+
+.scrollspy-example {
+	text-align: center;
 }
 
 .subGlossary {

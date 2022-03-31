@@ -17,6 +17,21 @@ header {
 	background-size: 100vw 600px;
 }
 
+#email-login {
+	margin-left: 49px;
+}
+
+#password-login {
+	margin-left: 8px;
+}
+
+#email-signup {
+	margin-left: 49px;
+}
+
+#password-signup {
+	margin-left: 8px;
+}
 .headerT {
 	font-family: cursive;
 	font-size: 18px;

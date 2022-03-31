@@ -43,13 +43,13 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/logout', async (req, res) => {
+router.get('/logout', async (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      res.status(204).end();
+      res.redirect('/');
     });
   } else {
-    res.status(404).end();
+    res.redirect('/');
   }
 });
 

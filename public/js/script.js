@@ -71,15 +71,6 @@ $modal.dialog({
   minWidth: 400,
 });
 
-<<<<<<< HEAD
-const init = function () {
-  $zipModal.hide();
-  geocode({ address: getZip });
-  getAgZone(getZip);
-};
-
-=======
->>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
 const createMarker = function (place) {
   if (!place.geometry || !place.geometry.location) return;
 
@@ -173,23 +164,16 @@ searchBtn.addEventListener('click', (event) => {
     // }
   }
 });
-<<<<<<< HEAD
 
-const show = function () {
-  paraP = document.getElementById('hidden');
-};
-=======
->>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
+// const show = function () {
+//   let paraP = document.getElementById('hidden');
+// };
 
 // API to pull agricultural zone
 // eslint-disable-next-line func-names
 const getAgZone = function (getZipCode) {
   // stitch the zipcode into the API URL
-<<<<<<< HEAD
-  const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZip}`;
-=======
   const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZipCode}`;
->>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
   console.log(agURL);
   fetch(agURL)
     .then((response) => response.json())
@@ -201,8 +185,6 @@ const getAgZone = function (getZipCode) {
       zoneLink.target = '_blank';
       zoneLink.innerText = 'Click here to see what you can grow in your zone!';
     });
-<<<<<<< HEAD
-=======
 };
 
 const init = function () {
@@ -210,7 +192,6 @@ const init = function () {
   $zipModal.hide();
   geocode({ address: getZip });
   getAgZone(getZip);
->>>>>>> fc1fd6e318c30e66d201697e94a71b9099179b99
 };
 
 document.addEventListener('DOMContentLoaded', (e) => {

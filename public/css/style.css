@@ -17,6 +17,10 @@ header {
 	background-size: 100vw 600px;
 }
 
+html {
+	height: 100%;
+}
+
 #email-login {
 	margin-left: 49px;
 }
@@ -340,6 +344,9 @@ form {
 	padding: 10px;
 }
 
+.page-title {
+	margin-left: 350px;
+}
 li {
 	padding: 10px;
 	font-size: 20px;
@@ -347,6 +354,7 @@ li {
 
 .card {
 	background-color: skyblue;
+	height: 650px;
 }
 
 .list-group {
@@ -363,6 +371,12 @@ li {
 
 .scrollspy-example {
 	text-align: center;
+}
+
+.card img {
+	padding-top: 20px;
+	width: 600px;
+	height: 300px;
 }
 
 .subGlossary {

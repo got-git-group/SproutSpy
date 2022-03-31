@@ -56,9 +56,9 @@ This project is created with:
 
 ## Setup
 
-Please visit https://github.com/AndyAn7/got-gitProjOne to see the repo in Github
+Please visit https://github.com/got-git-group/SproutSpy to see the repo in Github
 <br/>
-Please visit https://andyan7.github.io/got-gitProjOne/ to see deployed code through Github Pages.
+Please visit https://fast-cliffs-81659.herokuapp.com/ to see deployed code through Github Pages.
 
 ## License
 

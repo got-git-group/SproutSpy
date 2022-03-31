@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Plant } = require('../../models');
+const { Plant, Zone } = require('../../models');
 const withAuth = require('../../utils/auth.js')
 
 router.get('/', async (req, res) => {
   try {
 
-    const plantData = await Plant.findAll();
+    const plantData = await Plant.findAll({ include: Zone });
 
     if (plantData) {
       res.status(200).json(plantData);

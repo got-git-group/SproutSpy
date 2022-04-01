@@ -6,9 +6,8 @@ router.get('/', async (req, res) => {
     const plantData = await Plant.findAll({
       include: [Zone, Sunshine]
     });
-    
+
     const plants = plantData.map((plant) => plant.get({ plain: true }));
-    console.log(plants);
 
     res.render('results', {
       plants,

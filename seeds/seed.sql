@@ -1,28 +1,101 @@
-/* Insert seed data into the database */
-INSERT INTO plant (id, plantname, space, )
-VALUES ( 1, 'Asparagus', '12 to 18 inches wide and a full six inches deep. The crowns should be spaced 9 to 12 inches apart.', )
-, (2, "Bush Beans", "2 to 4 inches apart in rows at least 18 to 24 inches apart.", )
-, (3, "Pole Beans", "4 to 6 inches apart in rows 30 to 36 inches apart.", )
-, (4, "Beet", "1/2 inch deep and one inch apart. Allow 12 to 18 inches between rows.", )
-, (5, "Broccoli", "18 to 24 inches apart in the row and allow 36 inches between rows.", )
-, (6, "Brussels Sprouts", "24 to 36 inches apart in the row, or 24 inches in all directions in beds.", )
-, (7, "Cabbage", "12 to 24 inches apart in the row, 12 inches apart in all directions.", )
-, (8, "Carrot", "12 to 24 inches apart in the row, 12 inches apart in all directions.", )
-, (9, "Cauliflower", "18 to 24 inches apart in the row.", )
-, (10, "Celery", "12 to 24 inches apart in the row, 12 inches apart in all directions.", )
-, (11, "Chard", "1/2 to 3/4 inches deep (8 to 10 seeds per foot of row) Thin seedlings to 4 to 6 inches apart.", )
-, (12, "Collard", "6 inches apart, allow them to grow until they begin to touch, then harvest whole plants to give 18 inches between plants.", )
-, (13, "Corn", "Space the kernels 9 to 12 inches apart in the row. Allow 30 to 36 inches between rows", )
-, (14, "Cucumber", "one plant every 12 inches in the row.", )
-, (15, "Eggplant", "18 to 24 inches apart in the row, allow 30 to 36 inches between rows or space plants 24 inches apart in all directions in raised beds.", )
-, (16, "Lettuce", "1/4 to 1/2 inch deep (10 seeds per foot) in single, double or triple rows 12 to 18 inches apart.", )
-, (17, "Cantaloupe", "18 to 24 inches apart, space rows at least 5 feet apart.", )
-, (18, "Mustard", " 1/3 to 1/2 inch deep and thin seedlings to 3 to 5 inches apart.", )
-, (19, "Okra", "1 inch deep, 12 to 24 inches apart.", )
-, (20, "Onion", "4 to 5 inches apart in a row, allow 12 to 18 inches between rows or space onions 6 to 8 inches apart in all directions in beds.",)
-, (21, "Parsnip", "seed thickly, at least two or three seeds per inch, space rows 18 to 24 inches apart or plants 8 to 10 inches apart in a bed.", )
-, (22, "Peas", "1 to 1-1/2 inches deep and one inch apart in single or double rows. Allow 18 to 24 inches between single or pairs of rows. Allow 8 to 10 inches between double rows in pairs.", )
-, (23, "Peppers", "18 to 24 inches apart in the row, or 14 to 18 inches apart in all directions in beds.", )
-, (24, "Potatoes", "10 to 12 inches apart and cover in a furrow between 1 and 3 inches deep. Space rows 24 to 36 inches apart. The 24 inch spacing is often ideal.", )
-, (25, "Pumpkin", "Requires a minimum of 50 to 100 square feet per hill. Plant seeds one inch deep (four or five seeds per hill). Allow 5 to 6 feet between hills, spaced in rows 10 to 15 feet apart.", )
-, (26, "Radishes", "18 to 24 inches apart in a row, allow 30 to 36 inches between rows.", )
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 3, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 4, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 5, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 6, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 7, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 8, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 9, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 10, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 11, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 12, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 13, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 14, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 15, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 16, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 17, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 18, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 19, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 20, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 21, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 22, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 5, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 6, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 7, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 8, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 9, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 10, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 11, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 12, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 13, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 14, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 15, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 16, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 17, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (25, 18, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 5, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 6, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 7, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 8, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 9, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 10, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 11, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 12, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 13, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 14, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 15, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 16, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 17, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 18, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 19, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (24, 20, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (23, 17, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (23, 19, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 3, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 4, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 5, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 6, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 7, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 8, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 9, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 10, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 11, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 12, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 13, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 14, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 15, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 16, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 17, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (22, 18, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 3, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 4, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 5, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 6, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 7, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 8, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 9, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 10, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 11, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 12, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 13, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 14, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 15, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 16, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 17, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (21, 18, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+
+insert into sproutspy_db.PlantSunshine (plant_id, sunshine_id, created_at, updated_at) values (26, 3, '2021-07-17 16:37:08', '2021-07-17 16:37:08');
+
+insert into sproutspy_db.PlantSunshine (plant_id, sunshine_id, created_at, updated_at) values (25, 1, '2021-07-17 16:37:08', '2021-07-17 16:37:08');
+
+insert into sproutspy_db.PlantSunshine (plant_id, sunshine_id, created_at, updated_at) values (24, 1, '2021-07-17 16:37:08', '2021-07-17 16:37:08');
+
+insert into sproutspy_db.PlantSunshine (plant_id, sunshine_id, created_at, updated_at) values (23, 1, '2021-07-17 16:37:08', '2021-07-17 16:37:08');
+
+insert into sproutspy_db.PlantSunshine (plant_id, sunshine_id, created_at, updated_at) values (22, 1, '2021-07-17 16:37:08', '2021-07-17 16:37:08');
+
+insert into sproutspy_db.PlantSunshine (plant_id, sunshine_id, created_at, updated_at) values (21, 2, '2021-07-17 16:37:08', '2021-07-17 16:37:08');

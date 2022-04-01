@@ -181,8 +181,8 @@ const getAgZone = function (getZipCode) {
       console.log(data);
       zoneResults.textContent = `You live in Zone ${data.zone}!`;
       // generate link to zone growing info
-      zoneLink.href = `https://www.gardenate.com/?zone=${data.zone}`;
-      zoneLink.target = '_blank';
+      zoneLink.href = `/results/${data.zone}`;
+      // zoneLink.target = '_blank';
       zoneLink.innerText = 'Click here to see what you can grow in your zone!';
     });
 };

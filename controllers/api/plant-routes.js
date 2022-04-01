@@ -34,5 +34,26 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+
+    const plantData = await Plant.findOne(
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    );
+
+    if (plantData) {
+      res.status(200).json(plantData);
+    } else {
+      res.status(400).json({ message: 'Could not retrieve ID' });
+    };
+
+  } catch (err) {
+    res.status(400).json({ message: err });
+  }
+});
 
 module.exports = router;

@@ -10,7 +10,8 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Plant,
-          through: 'PlantZone'
+          through: 'PlantZone',
+          include: [Zone, Sunshine]
         }
       ]
     });
@@ -24,7 +25,7 @@ router.get('/:id', async (req, res) => {
     })
   } catch (err) {
     console.log(err);
-    res.status(500).json(err)
+    res.status(500).json(err);
   }
 });
 

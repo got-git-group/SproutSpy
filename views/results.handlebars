@@ -1,7 +1,9 @@
 {{!-- Use bootstrap cards, auto-generate results, see previous homeworks for inspo --}}
 <h1>Results</h1>
 <section class="row row-cols-1 row-cols-md-2 g-4">
-  {{#each plants as |plant|}}
+  {{#each zones as |zone|}}
+  {{#each zone.plants as |plant|}}
   {{> plant-details}}
+  {{/each}}
   {{/each}}
 </section>

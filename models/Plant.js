@@ -19,6 +19,9 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    plant_url: {
+      type: DataTypes.STRING,
+    }
   },
   {
     sequelize,

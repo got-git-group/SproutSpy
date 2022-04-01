@@ -37,6 +37,12 @@ html {
 	margin-left: 9px;
 }
 
+/* .plantimage {
+	display: block;
+	max-width: 100%;
+	height: auto;
+} */
+
 .headerT {
 	font-family: cursive;
 	font-size: 18px;
@@ -365,18 +371,14 @@ li {
 	flex-direction: row;
 }
 
-.list-group-item {
-	/* need to be able to see the top border for part sun part shade full shade */
-}
-
 .scrollspy-example {
 	text-align: center;
 }
 
 .card img {
 	padding-top: 20px;
-	width: 600px;
-	height: 300px;
+	max-width: 100%;
+	height: auto;
 }
 
 .subGlossary {

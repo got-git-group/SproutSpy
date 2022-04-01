@@ -37,12 +37,6 @@ html {
 	margin-left: 9px;
 }
 
-/* .plantimage {
-	display: block;
-	max-width: 100%;
-	height: auto;
-} */
-
 .headerT {
 	font-family: cursive;
 	font-size: 18px;
@@ -96,7 +90,8 @@ body {
 	font-size: 18px;
 	align-items: center;
 	justify-content: center;
-
+	background-attachment:fixed;
+	height:100%;
 }
 
 header .wrapper {
@@ -377,9 +372,10 @@ li {
 
 .card img {
 	padding-top: 20px;
+	width: 600px;
+	height: 300px;
 	max-width: 100%;
-	height: auto;
-}
+	}
 
 .subGlossary {
 	list-style-type: disc;

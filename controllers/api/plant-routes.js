@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Plant, Zone } = require('../../models');
+const { Plant, Zone, Sunshine } = require('../../models');
 const withAuth = require('../../utils/auth.js')
 
 router.get('/', async (req, res) => {
   try {
 
-    const plantData = await Plant.findAll({ include: Zone });
+    const plantData = await Plant.findAll({ include: [ Zone, Sunshine ] });
 
     if (plantData) {
       res.status(200).json(plantData);
@@ -34,5 +34,26 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+
+    const plantData = await Plant.findOne(
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    );
+
+    if (plantData) {
+      res.status(200).json(plantData);
+    } else {
+      res.status(400).json({ message: 'Could not retrieve ID' });
+    };
+
+  } catch (err) {
+    res.status(400).json({ message: err });
+  }
+});
 
 module.exports = router;

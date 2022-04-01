@@ -1,17 +1,26 @@
 const router = require('express').Router();
 const { Plant, Zone, Sunshine } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    const plantData = await Plant.findAll({
-      include: [Zone, Sunshine]
+    const zoneData = await Zone.findAll({
+      where: {
+        zonename: `zone ${req.params.id}`,
+      },
+      include: [
+        {
+          model: Plant,
+          through: 'PlantZone'
+        }
+      ]
     });
 
-    const plants = plantData.map((plant) => plant.get({ plain: true }));
+    const zones = zoneData.map((zone) => zone.get({ plain: true }));
+    console.log(zones);
 
     res.render('results', {
-      plants,
-      loggedIn: req.session.loggedIn
+      zones,
+      // loggedIn: req.session.loggedIn
     })
   } catch (err) {
     console.log(err);

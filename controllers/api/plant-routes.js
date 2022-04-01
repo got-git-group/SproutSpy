@@ -64,6 +64,7 @@ router.get('/:id', async (req, res) => {
   try {
     const plantData = await Plant.findOne(
       {
+        include: [Zone, Sunshine],
         where: {
           id: req.params.id
         }

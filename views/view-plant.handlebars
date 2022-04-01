@@ -1,0 +1,24 @@
+<div class="card text-white bg-success mb-3" style="width: 18rem;">
+
+  <img src="{{plant.plant_url}}" alt="{{plant.plantname}}" class="card-img-top">
+
+  <div class="card-body">
+
+    <h5 class="card-title">{{plant.plantname}}</h5>
+
+    {{!-- this is placeholder, update once the route and db are finalize! --}}
+    <p class="card-text">Zones this grows in: 
+    {{#each plant.zones as |zone|}}
+    {{zone.zonename}},
+    {{else}}
+    No zones listed
+    {{/each}}
+    </p>
+    <p class="card-text">Space needed to grow: {{plant.space}}</p>
+    {{#each plant.sunshine as |sun|}}
+    <p class="card-text">Sunlight required: {{sun.sunshinename}}</p>
+    {{/each}}
+{{!-- add link back in later if we build out individual plant pages --}}
+    {{!-- <a href="/plant/{{id}}" class="btn btn-primary bg-primary">See Details</a> --}}
+  </div>
+</div>

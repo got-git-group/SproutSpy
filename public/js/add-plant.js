@@ -13,14 +13,13 @@ const addPlant = async (event) => {
   const space = spaceElement.value;
   const plant_url = plantUrlElement.value;
 
-  console.log(plantname, zones, sunshine, space);
-
   zones = zones.replace(/,\s+/g, ',');
   const zoneList = zones.toLowerCase().split(',');
-  console.log(zoneList);
 
-  const zoneObjects = zoneList.map((zone) => { return { zonename: zone }; });
-  console.log(zoneObjects);
+  const zoneObjects = [];
+  zoneList.forEach((zone) => {
+    zoneObjects.push({ zonename: zone });
+  });
 
   const newPlant = {
     plantname,
@@ -38,8 +37,7 @@ const addPlant = async (event) => {
 
   if (response.ok) {
     const json = await response.json();
-    console.log(json);
-    window.location.href = `/plants/${json.id}`;
+    window.location.href = `/plant/${json.id}`;
   }
 };
 

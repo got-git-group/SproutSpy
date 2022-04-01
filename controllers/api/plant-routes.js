@@ -20,10 +20,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   logger.info(`POST request to /api/plants with ${JSON.stringify(req.body)}`);
-  const bodyZones = req.body.zones;
-  const zoneNames = bodyZones.map(zone => zone.zonename);
+  const bodyZones = req.body.zones[0];
+  const zoneNames = bodyZones.map((zone) => zone.zonename);
   const bodySunshines = req.body.sunshine;
   try {
     const plantData = await Plant.create(req.body);
@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  logger.info('GET request to /api/plants/:id');
+  logger.info('GET request to /api/plant/:id');
   try {
     const plantData = await Plant.findOne(
       {

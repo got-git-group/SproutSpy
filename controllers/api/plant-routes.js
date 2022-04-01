@@ -4,13 +4,13 @@ const withAuth = require('../../utils/auth.js')
 
 router.get('/', async (req, res) => {
   try {
-    
+
     const plantData = await Plant.findAll();
 
     if (plantData) {
-        res.status(200).json(plantData);
+      res.status(200).json(plantData);
     } else {
-        res.status(400).json({ message: 'Could not retrieve plants'});
+      res.status(400).json({ message: 'Could not retrieve plants' });
     };
 
   } catch (err) {
@@ -19,20 +19,42 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    try {
-      
-      const plantData = await Plant.create(req.body);
-  
-      if (plantData) {
-          res.status(200).json(plantData);
-      } else {
-          res.status(400).json({ message: 'Could not create plant'});
-      };
-  
-    } catch (err) {
-      res.status(400).json({ message: err });
-    }
-  });
+  try {
+
+    const plantData = await Plant.create(req.body);
+
+    if (plantData) {
+      res.status(200).json(plantData);
+    } else {
+      res.status(400).json({ message: 'Could not create plant' });
+    };
+
+  } catch (err) {
+    res.status(400).json({ message: err });
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  try {
+
+    const plantData = await Plant.findOne(
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    );
+
+    if (plantData) {
+      res.status(200).json(plantData);
+    } else {
+      res.status(400).json({ message: 'Could not retrieve ID' });
+    };
+
+  } catch (err) {
+    res.status(400).json({ message: err });
+  }
+});
 
 
 module.exports = router;

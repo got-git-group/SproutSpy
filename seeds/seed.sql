@@ -1,4 +1,5 @@
 insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 3, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
+insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (1, 19, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
 insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 4, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
 insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 5, '2022-03-31 16:37:08', '2022-03-31 16:37:08');
 insert into sproutspy_db.PlantZone (plant_id, zone_id, created_at, updated_at) values (26, 6, '2022-03-31 16:37:08', '2022-03-31 16:37:08');

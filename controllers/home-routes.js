@@ -27,4 +27,14 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
+router.get('/add-plant', async (req, res) => {
+  if (req.session.loggedIn) {
+    res.render('add-plant', {
+      loggedIn: req.session.loggedIn
+    });
+  } else {
+    res.redirect('/login');
+  }
+});
+
 module.exports = router;

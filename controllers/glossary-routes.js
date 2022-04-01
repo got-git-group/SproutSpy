@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     anything else need to be rendered? I think not if we aren't pulling 
     anything from the db. */
     res.render('glossary', {
-    //   loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);

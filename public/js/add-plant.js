@@ -1,4 +1,5 @@
 const plantElement = document.querySelector('#plantname');
+const plantUrlElement = document.querySelector('#planturl');
 const zonesElement = document.querySelector('#zones');
 const sunshineElement = document.querySelector('#sunshine');
 const spaceElement = document.querySelector('#space');
@@ -10,6 +11,7 @@ const addPlant = async (event) => {
   let zones = zonesElement.value;
   const sunshine = sunshineElement.value;
   const space = spaceElement.value;
+  const plant_url = plantUrlElement.value;
 
   console.log(plantname, zones, sunshine, space);
 
@@ -21,9 +23,10 @@ const addPlant = async (event) => {
   console.log(zoneObjects);
 
   const newPlant = {
-    plantname: plantname,
-    space: space,
-    sunshine: [{sunshinename: sunshine}],
+    plantname,
+    plant_url,
+    space,
+    sunshine: [{ sunshinename: sunshine }],
     zones: [zoneObjects]
   };
 
@@ -33,7 +36,11 @@ const addPlant = async (event) => {
     headers: { 'Content-Type': 'application/json' }
   });
 
-  console.log(newPlant);
+  if (response.ok) {
+    const json = await response.json();
+    console.log(json);
+    window.location.href = `/plants/${json.id}`;
+  }
 };
 
 createButton.addEventListener('click', addPlant);

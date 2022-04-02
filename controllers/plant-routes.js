@@ -1,5 +1,4 @@
 const router = require('express').Router();
-// import models needed - may not need User/Comments
 const { Plant, Zone, Sunshine } = require('../models');
 
 router.get('/:id', async (req, res) => {

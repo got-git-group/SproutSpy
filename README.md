@@ -25,6 +25,7 @@ I WANT: -to know what plants I can grow near me,
         -to get instructions for growing those plants
         -to find a community garden
         -to know the current weather to plan the day accordingly
+        -to sign up as a new user or login, in order to add a plant to the database
 SO THAT: I can start gardening with confidence
 ```
 <ins>Acceptance Criteria</ins>
@@ -34,9 +35,13 @@ GIVEN I am using the Sprout Spy website to learn how to garden,
 WHEN I open the Sprout Spy website, 
 THEN i see a a welcome modal that lightens the mood of anxious future gardeners.
 WHEN I click an answer for the modal, 
-THEN I am greeted by the Openweathermaps header, and google maps API to search for local gardens and local planting zone information.
+THEN I see the Openweathermaps header, and google maps API to search for local gardens and local planting zone information.
 WHEN I enter a zip code in the search bar,
-THEN I am greeted with the results for current weather, zoning and planting information, as well as local gardens.
+THEN I see with the results for the corresponding agricultural zone as well as local gardens.
+WHEN I click to see results,
+THEN I am taken to the results page that lists plants I can grow in my zone.
+WHEN I log in or sign up,
+THEN I can add a plant to the database.
 ```
 	
 ## Technologies
@@ -49,10 +54,17 @@ This project is created with:
 * Google Places API
 * C0bra API
 * Openweathermaps API
+* Express
+* Sequelize
+* mySQL
+* Azure
+* Handlebars
 
 ## Screenshot
 ![screenshot](./public/images/weatherss.jpg)
 ![screenshot](./public/images/localgarden.jpg)
+![screenshot](./public/images/results.PNG)
+![screenshot](./public/images/addPlant.PNG)
 
 ## Setup
 

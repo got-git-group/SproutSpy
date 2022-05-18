@@ -1,4 +1,4 @@
-# Sprout Spy
+# Sprout Spy 2.0
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://fast-cliffs-81659.herokuapp.com/ )
 

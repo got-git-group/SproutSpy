@@ -181,8 +181,7 @@ const getAgZone = function (getZipCode) {
     }
   };
   const agURL = `https://plant-hardiness-zone.p.rapidapi.com/zipcodes/${getZipCode}`;
-  console.log(agURL, options);
-  fetch(agURL)
+  fetch(agURL, options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);

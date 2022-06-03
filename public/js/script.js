@@ -173,7 +173,7 @@ searchBtn.addEventListener('click', (event) => {
 // eslint-disable-next-line func-names
 const getAgZone = function (getZipCode) {
   // stitch the zipcode into the API URL
-  const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZipCode}`;
+  const agURL = `https://plant-hardiness-zone.p.rapidapi.com/zipcodes/${getZipCode}`;
   console.log(agURL);
   fetch(agURL)
     .then((response) => response.json())

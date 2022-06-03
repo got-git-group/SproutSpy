@@ -177,7 +177,7 @@ const getAgZone = function (getZipCode) {
     method: 'GET',
     headers: {
       'X-RapidAPI-Host': 'plant-hardiness-zone.p.rapidapi.com',
-      'X-RapidAPI-Key': '9e8d5574f5mshed96822741df5dap1c7854jsn20d6a0af1ffb'
+      'X-RapidAPI-Key': 'f720bff0aemsh09e18b403689183p139bd3jsn8f600209aac2'
     }
   };
   const agURL = `https://plant-hardiness-zone.p.rapidapi.com/zipcodes/${getZipCode}`;

@@ -168,27 +168,27 @@ searchBtn.addEventListener('click', (event) => {
 // const show = function () {
 //   let paraP = document.getElementById('hidden');
 // };
-// API options
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Host': 'plant-hardiness-zone.p.rapidapi.com',
-    'X-RapidAPI-Key': '9e8d5574f5mshed96822741df5dap1c7854jsn20d6a0af1ffb'
-  }
-};
+
 // API to pull agricultural zone
 // eslint-disable-next-line func-names
 const getAgZone = function (getZipCode) {
   // stitch the zipcode into the API URL
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'plant-hardiness-zone.p.rapidapi.com',
+      'X-RapidAPI-Key': '9e8d5574f5mshed96822741df5dap1c7854jsn20d6a0af1ffb'
+    }
+  };
   const agURL = `https://plant-hardiness-zone.p.rapidapi.com/zipcodes/${getZipCode}`;
   console.log(agURL, options);
   fetch(agURL)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      zoneResults.textContent = `You live in Zone ${data.zone}!`;
+      zoneResults.textContent = `You live in Zone ${data.hardiness_zone}!`;
       // generate link to zone growing info
-      zoneLink.href = `/results/${data.zone}`;
+      zoneLink.href = `/results/${data.hardiness_zone}`;
       // zoneLink.target = '_blank';
       zoneLink.innerText = 'Click here to see what you can grow in your zone!';
     });

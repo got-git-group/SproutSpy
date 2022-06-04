@@ -173,15 +173,21 @@ searchBtn.addEventListener('click', (event) => {
 // eslint-disable-next-line func-names
 const getAgZone = function (getZipCode) {
   // stitch the zipcode into the API URL
-  const agURL = `https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${getZipCode}`;
-  console.log(agURL);
-  fetch(agURL)
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'plant-hardiness-zone.p.rapidapi.com',
+      'X-RapidAPI-Key': 'f720bff0aemsh09e18b403689183p139bd3jsn8f600209aac2'
+    }
+  };
+  const agURL = `https://plant-hardiness-zone.p.rapidapi.com/zipcodes/${getZipCode}`;
+  fetch(agURL, options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      zoneResults.textContent = `You live in Zone ${data.zone}!`;
+      zoneResults.textContent = `You live in Zone ${data.hardiness_zone}!`;
       // generate link to zone growing info
-      zoneLink.href = `/results/${data.zone}`;
+      zoneLink.href = `/results/${data.hardiness_zone}`;
       // zoneLink.target = '_blank';
       zoneLink.innerText = 'Click here to see what you can grow in your zone!';
     });
